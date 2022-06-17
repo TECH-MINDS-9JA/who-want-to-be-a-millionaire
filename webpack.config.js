@@ -16,7 +16,7 @@ module.exports = {
         liveReload: true
     },
     resolve: {
-        extensions: ['.js','.jsx','.json'],
+        extensions: ['.js', '.jsx', '.json'],
     },
     module: {
         rules: [
@@ -29,15 +29,15 @@ module.exports = {
                     options: {
                         presets: ['@babel/preset-env', '@babel/preset-react']
                     }
-                }    
+                }
             },
             {
                 test: /\.css$/i,
                 use: ['style-loader', "css-loader"]
             },
             {
-                test: /\.(png|jpg(e*)g|svg|gif)$/,
-                use: ['file-loader']
+                test: /\.(png|jpg(e*)g|svg|gif)$/i,
+                use: ['file-loader'],
             },
             {
                 test: /\.svg$/,

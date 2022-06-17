@@ -3,7 +3,7 @@ import { HomeContainer } from './home.style'
 import { Counter, Main } from '../../file'
 function Home() {
   return (
-      <HomeContainer>
+      <HomeContainer >
       <Counter />
       <Main />
     </HomeContainer>
