@@ -1,6 +1,6 @@
 import React from 'react'
 import { HomeContainer } from './home.style'
-import { Counter, Main } from '../../file'
+import { Counter, Main} from '../../file'
 function Home() {
   return (
       <HomeContainer >

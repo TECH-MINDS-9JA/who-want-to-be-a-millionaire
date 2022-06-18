@@ -1,8 +1,10 @@
 import React from 'react'
-import { CounterContainer } from './counter.style'
+import { CounterContainer, Num } from './counter.style'
 function Counter() {
   return (
-    <CounterContainer>Counter</CounterContainer>
+    <CounterContainer>
+      <Num>29</Num>
+    </CounterContainer>
   )
 }
 

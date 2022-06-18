@@ -21,6 +21,10 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(jpg|png)$/,
+                use: ["file-loader"]
+            },
+            {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use:
@@ -34,10 +38,6 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: ['style-loader', "css-loader"]
-            },
-            {
-                test: /\.(png|jpg(e*)g|svg|gif)$/i,
-                use: ['file-loader'],
             },
             {
                 test: /\.svg$/,
