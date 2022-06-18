@@ -60,3 +60,28 @@ export const money = [
         cash: 1000000
     },
 ].reverse()
+
+export const questionData = [
+    {
+        id: 1,
+        question: 'rolex is a company that specializes in what type of product?',
+        answers: [
+            {
+                text: "Phone",
+                correct: false,
+            },
+            {
+                text: "Watches",
+                correct: true
+            },
+            {
+                text: "Food",
+                correct: false
+            },
+            {
+                text: "Cosmetic",
+                correct: false
+            }
+        ]
+    }
+]

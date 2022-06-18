@@ -1,0 +1,40 @@
+.answer.active{
+    background: blue;
+}
+.answer.correct{
+    animation:  correct 3s ease forwards;
+}
+.answer.wrong{
+    animation: wrong 3s ease forwards; 
+}
+@keyframes correct {
+    0%,
+    22%,
+    42%{
+        background: mediumblue;
+    }20%,
+    40%,
+    60%{
+        background: linearGradient(#0e0124, #22074d);
+    }
+    62%,
+    70%,
+    100%{
+        background: green
+    }
+}
+@keyframes wrong {
+    0%,
+    22%,
+    42%{
+        background: mediumblue;
+    }20%,
+    40%,
+    60%{
+        background: linearGradient(#0e0124, #22074d)
+    }62%,
+    70%,
+    100%{
+            background: crimson;
+    }
+}
