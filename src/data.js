@@ -83,5 +83,327 @@ export const questionData = [
                 correct: false
             }
         ]
-    }
+    },
+       {
+        id: 2,
+        question: 'rolex is a company that specializes in what type of product?',
+        answers: [
+            {
+                text: "Phone",
+                correct: false,
+            },
+            {
+                text: "Watches",
+                correct: true
+            },
+            {
+                text: "Food",
+                correct: false
+            },
+            {
+                text: "Cosmetic",
+                correct: false
+            }
+        ]
+    },
+
+          {
+        id: 3,
+        question: 'rolex is a company that specializes in what type of product?',
+        answers: [
+            {
+                text: "Phone",
+                correct: false,
+            },
+            {
+                text: "Watches",
+                correct: true
+            },
+            {
+                text: "Food",
+                correct: false
+            },
+            {
+                text: "Cosmetic",
+                correct: false
+            }
+        ]
+    },
+
+             {
+        id: 4,
+        question: 'rolex is a company that specializes in what type of product?',
+        answers: [
+            {
+                text: "Phone",
+                correct: false,
+            },
+            {
+                text: "Watches",
+                correct: true
+            },
+            {
+                text: "Food",
+                correct: false
+            },
+            {
+                text: "Cosmetic",
+                correct: false
+            }
+        ]
+    },
+
+                {
+        id: 5,
+        question: 'rolex is a company that specializes in what type of product?',
+        answers: [
+            {
+                text: "Phone",
+                correct: false,
+            },
+            {
+                text: "Watches",
+                correct: true
+            },
+            {
+                text: "Food",
+                correct: false
+            },
+            {
+                text: "Cosmetic",
+                correct: false
+            }
+        ]
+    },
+   {
+        id: 6,
+        question: 'rolex is a company that specializes in what type of product?',
+        answers: [
+            {
+                text: "Phone",
+                correct: false,
+            },
+            {
+                text: "Watches",
+                correct: true
+            },
+            {
+                text: "Food",
+                correct: false
+            },
+            {
+                text: "Cosmetic",
+                correct: false
+            }
+        ]
+    },
+
+      {
+        id: 7,
+        question: 'rolex is a company that specializes in what type of product?',
+        answers: [
+            {
+                text: "Phone",
+                correct: false,
+            },
+            {
+                text: "Watches",
+                correct: true
+            },
+            {
+                text: "Food",
+                correct: false
+            },
+            {
+                text: "Cosmetic",
+                correct: false
+            }
+        ]
+    },
+
+         {
+        id: 8,
+        question: 'rolex is a company that specializes in what type of product?',
+        answers: [
+            {
+                text: "Phone",
+                correct: false,
+            },
+            {
+                text: "Watches",
+                correct: true
+            },
+            {
+                text: "Food",
+                correct: false
+            },
+            {
+                text: "Cosmetic",
+                correct: false
+            }
+        ]
+    },
+
+            {
+        id: 9,
+        question: 'rolex is a company that specializes in what type of product?',
+        answers: [
+            {
+                text: "Phone",
+                correct: false,
+            },
+            {
+                text: "Watches",
+                correct: true
+            },
+            {
+                text: "Food",
+                correct: false
+            },
+            {
+                text: "Cosmetic",
+                correct: false
+            }
+        ]
+    },
+
+               {
+        id: 10,
+        question: 'rolex is a company that specializes in what type of product?',
+        answers: [
+            {
+                text: "Phone",
+                correct: false,
+            },
+            {
+                text: "Watches",
+                correct: true
+            },
+            {
+                text: "Food",
+                correct: false
+            },
+            {
+                text: "Cosmetic",
+                correct: false
+            }
+        ]
+    },
+
+                  {
+        id: 11,
+        question: 'rolex is a company that specializes in what type of product?',
+        answers: [
+            {
+                text: "Phone",
+                correct: false,
+            },
+            {
+                text: "Watches",
+                correct: true
+            },
+            {
+                text: "Food",
+                correct: false
+            },
+            {
+                text: "Cosmetic",
+                correct: false
+            }
+        ]
+    },
+
+                     {
+        id: 12,
+        question: 'rolex is a company that specializes in what type of product?',
+        answers: [
+            {
+                text: "Phone",
+                correct: false,
+            },
+            {
+                text: "Watches",
+                correct: true
+            },
+            {
+                text: "Food",
+                correct: false
+            },
+            {
+                text: "Cosmetic",
+                correct: false
+            }
+        ]
+    },
+
+                        {
+        id: 13,
+        question: 'rolex is a company that specializes in what type of product?',
+        answers: [
+            {
+                text: "Phone",
+                correct: false,
+            },
+            {
+                text: "Watches",
+                correct: true
+            },
+            {
+                text: "Food",
+                correct: false
+            },
+            {
+                text: "Cosmetic",
+                correct: false
+            }
+        ]
+    },
+
+                           {
+        id: 14,
+        question: 'rolex is a company that specializes in what type of product?',
+        answers: [
+            {
+                text: "Phone",
+                correct: false,
+            },
+            {
+                text: "Watches",
+                correct: true
+            },
+            {
+                text: "Food",
+                correct: false
+            },
+            {
+                text: "Cosmetic",
+                correct: false
+            }
+        ]
+    },
+
+   {
+        id: 15,
+        question: 'rolex is a company that specializes in what type of product?',
+        answers: [
+            {
+                text: "Phone",
+                correct: false,
+            },
+            {
+                text: "Watches",
+                correct: true
+            },
+            {
+                text: "Food",
+                correct: false
+            },
+            {
+                text: "Cosmetic",
+                correct: false
+            }
+        ]
+    },
+
+
 ]

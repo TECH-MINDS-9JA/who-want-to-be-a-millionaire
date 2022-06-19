@@ -1,11 +1,11 @@
 import React from 'react'
 import { QuestionContainer, Text } from './question.style'
-function Question() {
+function Question({data}) {
   return (
       <QuestionContainer>
-          <Text>Rolex Company That Specialize In What Type Of Product?</Text>
+      <Text>{ data}</Text>
       </QuestionContainer>
   )
 }
-
+ 
 export default Question

@@ -1,10 +1,11 @@
 import React from 'react'
 import './option.css'
 import { OptionContainer, Text } from './option.style'
-function Option() {
+function Option({ data }) {
+  const { text, correct  } = data 
   return (
       <OptionContainer className='answer active'>
-          <Text>Phone</Text>
+      <Text>{ text}</Text>
       </OptionContainer>
   )
 }
