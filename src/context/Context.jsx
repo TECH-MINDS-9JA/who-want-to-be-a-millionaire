@@ -13,9 +13,9 @@ export const ContextProvider = ({ children }) => {
     const optionClick = (a) => {
         setSelected(a)
         setClassName("active")
-     setTimeout(() => {
-            setClassName(a.correct ? "correct" : "wrong")
-        }, 3000)
+        setTimeout(() => {
+            setClassName(selected === a.correct ? "correct" : "wrong")
+        },3000)
 }
     useEffect(() => {
             setQuestions(question[questionNum - 1])
