@@ -14,7 +14,7 @@ export const ContextProvider = ({ children }) => {
         setSelected(a)
         setClassName("active")
         setTimeout(() => {
-            setClassName(selected === a.correct ? "correct" : "wrong")
+            setClassName(a.correct ? "correct" : "wrong")
         },3000)
 }
     useEffect(() => {

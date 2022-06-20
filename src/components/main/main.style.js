@@ -32,9 +32,6 @@ export const Option = styled.div`
     cursor: pointer;
     box-shadow: 0px 2px 2px 0px darkgray;
 background: linear-gradient(#0e0124, #22074d);
-    &:hover{
-        background: #22074d;
-    }
 `
 export const Text = styled.p`
 text-align: center;

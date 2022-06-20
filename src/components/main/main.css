@@ -3,9 +3,12 @@
 }
 .correct{
     animation:  correct 3s ease forwards;
+    transition: all 3s linear;
 }
 .wrong{
     animation: wrong 3s ease forwards; 
+    transition: all 3s linear;
+
 }
 @keyframes correct {
     0%,
