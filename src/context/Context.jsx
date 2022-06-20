@@ -10,16 +10,33 @@ export const ContextProvider = ({ children }) => {
     const [time, setTime ] = useState(false)
     const [selected, setSelected] = useState(null)
     const [className, setClassName] = useState(null)
+    const [dollars, setDollars] = useState(`$ 0`)
+    const delay = (duration, callback) => {
+        setTimeout(() => {
+            callback();
+        }, duration)
+    }
     const optionClick = (a) => {
         setSelected(a)
         setClassName("active")
-        setTimeout(() => {
-            setClassName(a.correct ? "correct" : "wrong")
-        },3000)
+        delay(3000, () => setClassName(a.correct ? "correct" : "wrong"))
+        delay(6000, () => {
+            if (a.correct) {
+                setQuestionNum((prev) => prev + 1)
+                setSelected(null)
+            } else {
+                setTime(true)
+            }
+        } )
+        
 }
     useEffect(() => {
             setQuestions(question[questionNum - 1])
-    },[questionNum, question])
+    }, [questionNum, question])
+    
+    useEffect(() => {
+        
+    },[questionNum])
     return <ContextContext.Provider
         value={{
             questionNum, setQuestionNum,
@@ -27,7 +44,8 @@ export const ContextProvider = ({ children }) => {
             time, setTime,
             selected, setSelected,
             className, setClassName,
-            optionClick
+            optionClick,
+            dollars, setDollars
     }}>
         {children }
     </ContextContext.Provider>

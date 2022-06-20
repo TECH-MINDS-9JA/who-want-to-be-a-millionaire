@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import GlobalStyle from './App.style'
 import { AppContainer } from './App.style'
-import { Home, Cash } from './file'
+import { Home, Cash, Stop } from './file'
+import { ContextContext } from './context/Context'
 function App() {
+    const {time } = useContext(ContextContext)
     return (
         <AppContainer>
             <GlobalStyle />
-            <Home />
-            <Cash />
+            {
+                time ? <Stop />
+                    :
+                <>
+                    <Home />
+                    <Cash />
+                </>
+            }
          </AppContainer>
   )
 }

@@ -6,6 +6,9 @@ import { default as Main } from './components/main/Main'
 import { money as MoneyData } from './data'
 import { default as Question } from './components/question/Question'
 import { questionData as question } from './data'
+import { default as Stop } from './components/stop/Stop'
+import {default as Start } from './components/start/Start'
 
 
-export  { Home, Cash, Money, MoneyData, Counter, Main,  Question, question }
+
+export  { Home, Cash, Money, MoneyData, Counter, Main,  Question, question, Stop, Start }

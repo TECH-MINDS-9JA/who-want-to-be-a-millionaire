@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { HomeContainer } from './home.style'
-import { Counter, Main} from '../../file'
+import { Counter, Main, Stop } from '../../file'
+import { ContextContext } from '../../context/Context'
 function Home() {
+  const { time } = useContext(ContextContext)
   return (
-      <HomeContainer >
+    <HomeContainer >
       <Counter />
       <Main />
     </HomeContainer>
