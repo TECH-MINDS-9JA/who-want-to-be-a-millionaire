@@ -1,10 +1,10 @@
-.answer.active{
+.active{
     background: blue;
 }
-.answer.correct{
+.correct{
     animation:  correct 3s ease forwards;
 }
-.answer.wrong{
+.wrong{
     animation: wrong 3s ease forwards; 
 }
 @keyframes correct {

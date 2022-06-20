@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './option.css'
 import { OptionContainer, Text } from './option.style'
+import { ContextContext } from '../../context/Context'
 function Option({ data }) {
-  const { text, correct  } = data 
+  const { text} = data 
+  const { selected, className, optionClick } = useContext(ContextContext)
+  console.log(className)
+
   return (
-      <OptionContainer className='answer active'>
+      <OptionContainer className={selected === data.correct ? className  : null } onClick={() => optionClick(data)}>
       <Text>{ text}</Text>
       </OptionContainer>
   )
