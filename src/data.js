@@ -1,3 +1,5 @@
+
+
 export const money = [
         {
         id: 1,
@@ -61,7 +63,8 @@ export const money = [
     },
 ].reverse()
 
-export const questionData = [
+
+export const questionData =  [
     {
         id: 1,
         question: 'rolex is a company that specializes in what type of product?',
@@ -404,6 +407,4 @@ export const questionData = [
             }
         ]
     },
-
-
 ]

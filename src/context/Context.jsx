@@ -10,6 +10,7 @@ export const ContextProvider = ({ children }) => {
     const [time, setTime ] = useState(false)
     const [selected, setSelected] = useState(null)
     const [className, setClassName] = useState(null)
+    const [lastQuestion, setLastQuestion] = useState(false)
     const [dollars, setDollars] = useState(`$ 0`)
     const delay = (duration, callback) => {
         setTimeout(() => {
