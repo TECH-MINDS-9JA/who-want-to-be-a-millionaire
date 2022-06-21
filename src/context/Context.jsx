@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, createContext } from 'react'
-import { question } from '../file'
+import { question, moneyData } from '../file'
 
 export const ContextContext = createContext()
 
@@ -11,7 +11,8 @@ export const ContextProvider = ({ children }) => {
     const [selected, setSelected] = useState(null)
     const [className, setClassName] = useState(null)
     const [lastQuestion, setLastQuestion] = useState(false)
-    const [dollars, setDollars] = useState(`$ 0`)
+    const [dollars, setDollars] = useState()
+    const [timer, setTimer] = useState(30)
     const delay = (duration, callback) => {
         setTimeout(() => {
             callback();
@@ -36,8 +37,19 @@ export const ContextProvider = ({ children }) => {
     }, [questionNum, question])
     
     useEffect(() => {
-        
-    },[questionNum])
+            questionNum > 1 && setDollars(moneyData.find((m) => m.id === questionNum - 1).cash)
+    }, [questionNum, moneyData])
+    useEffect(() => {
+        if(timer === 0) return setTime(true)
+        const interval = setInterval(() => {
+                setTimer(prev => prev - 1)
+        },1000)
+    return () => clearInterval(interval)
+    }, [time, setTime])
+
+         useEffect(() => {
+            setTimer(30)
+        },[questionNum])
     return <ContextContext.Provider
         value={{
             questionNum, setQuestionNum,
@@ -46,7 +58,8 @@ export const ContextProvider = ({ children }) => {
             selected, setSelected,
             className, setClassName,
             optionClick,
-            dollars, setDollars
+            dollars, setDollars,
+            timer, setTimer
     }}>
         {children }
     </ContextContext.Provider>
