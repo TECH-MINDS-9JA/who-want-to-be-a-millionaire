@@ -5,7 +5,6 @@ import { ContextContext } from '../../context/Context'
 import './main.css'
 function Main() {
   const { questions, optionClick, selected, className } = useContext(ContextContext)
-      console.log(selected, className)
   return (
     <MainContainer>
         <MainWrapper>

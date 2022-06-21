@@ -1,11 +1,11 @@
 
 import React, { useState, useEffect, createContext } from 'react'
-import { question, moneyData } from '../file'
+import { question, MoneyData } from '../file'
 
 export const ContextContext = createContext()
 
 export const ContextProvider = ({ children }) => {
-    const [questionNum, setQuestionNum] = useState(5)
+    const [questionNum, setQuestionNum] = useState(1)
     const [questions, setQuestions] = useState(null)
     const [time, setTime ] = useState(false)
     const [selected, setSelected] = useState(null)
@@ -37,13 +37,14 @@ export const ContextProvider = ({ children }) => {
     }, [questionNum, question])
     
     useEffect(() => {
-            questionNum > 1 && setDollars(moneyData.find((m) => m.id === questionNum - 1).cash)
-    }, [questionNum, moneyData])
+            questionNum > 1 && setDollars(MoneyData.find((m) => m.id === questionNum - 1).cash)
+    }, [questionNum, MoneyData])
     useEffect(() => {
-        if(timer === 0) return setTime(true)
+        // if (timer === 1) return setTime(true);
         const interval = setInterval(() => {
                 setTimer(prev => prev - 1)
-        },1000)
+        }, 1000)
+           if (timer === 1) return setTime(true);
     return () => clearInterval(interval)
     }, [time, setTime])
 
