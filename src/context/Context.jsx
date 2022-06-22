@@ -10,7 +10,6 @@ export const ContextProvider = ({ children }) => {
     const [time, setTime ] = useState(false)
     const [selected, setSelected] = useState(null)
     const [className, setClassName] = useState(null)
-    const [lastQuestion, setLastQuestion] = useState(false)
     const [dollars, setDollars] = useState()
     const [timer, setTimer] = useState(30)
     const delay = (duration, callback) => {
@@ -30,7 +29,6 @@ export const ContextProvider = ({ children }) => {
                 setTime(true)
             }
         } )
-        
 }
     useEffect(() => {
             setQuestions(question[questionNum - 1])
@@ -38,15 +36,14 @@ export const ContextProvider = ({ children }) => {
     
     useEffect(() => {
             questionNum > 1 && setDollars(MoneyData.find((m) => m.id === questionNum - 1).cash)
-    }, [questionNum, MoneyData])
+    }, [questionNum])
     useEffect(() => {
-        // if (timer === 1) return setTime(true);
+        if (timer === 0) return  setTime(true);
         const interval = setInterval(() => {
                 setTimer(prev => prev - 1)
         }, 1000)
-           if (timer === 1) return setTime(true);
     return () => clearInterval(interval)
-    }, [time, setTime])
+    }, [timer, setTime])
 
          useEffect(() => {
             setTimer(30)
