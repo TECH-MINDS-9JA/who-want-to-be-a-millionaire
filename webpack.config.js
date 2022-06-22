@@ -21,7 +21,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(jpg|png)$/,
+                test: /\.(jpg|png|mp3)$/,
                 use: ["file-loader"]
             },
             {
@@ -42,7 +42,8 @@ module.exports = {
             {
                 test: /\.svg$/,
                 use: ["@svgr/webpack"]
-            }
+            },
+
         ]
     }, 
     plugins: [

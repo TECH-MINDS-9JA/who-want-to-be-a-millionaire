@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect, createContext } from 'react'
-import { question, MoneyData } from '../file'
+import { question, MoneyData,startPlay, correct,wrong} from '../file'
+import useSound from 'use-sound'
 
 export const ContextContext = createContext()
 
@@ -12,6 +13,12 @@ export const ContextProvider = ({ children }) => {
     const [className, setClassName] = useState(null)
     const [dollars, setDollars] = useState()
     const [timer, setTimer] = useState(30)
+    const [playSound] = useSound(startPlay)
+    const [correctAnswer] = useSound(correct)
+    const [wrongAnswer] = useSound(wrong)
+            useEffect(() => {
+        playSound()
+    },[playSound])
     const delay = (duration, callback) => {
         setTimeout(() => {
             callback();
@@ -24,9 +31,11 @@ export const ContextProvider = ({ children }) => {
         delay(6000, () => {
             if (a.correct) {
                 setQuestionNum((prev) => prev + 1)
+                        useSound(correctAnswer())
                 setSelected(null)
             } else {
                 setTime(true)
+                     useSound(wrongAnswer())
             }
         } )
 }
