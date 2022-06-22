@@ -28,14 +28,18 @@ export const ContextProvider = ({ children }) => {
         setSelected(a)
         setClassName("active")
         delay(3000, () => setClassName(a.correct ? "correct" : "wrong"))
-        delay(6000, () => {
+        delay(5000, () => {
             if (a.correct) {
-                setQuestionNum((prev) => prev + 1)
-                        useSound(correctAnswer())
-                setSelected(null)
+                correctAnswer();
+                delay(1000, () => {
+                        setQuestionNum((prev) => prev + 1)
+                        setSelected(null)
+                })
             } else {
-                setTime(true)
-                     useSound(wrongAnswer())
+                      wrongAnswer()
+                delay(1000, () => {
+                         setTime(true)
+                })
             }
         } )
 }
