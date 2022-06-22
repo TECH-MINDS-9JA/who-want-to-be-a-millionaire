@@ -11,14 +11,18 @@ export const ContextProvider = ({ children }) => {
     const [time, setTime ] = useState(false)
     const [selected, setSelected] = useState(null)
     const [className, setClassName] = useState(null)
+    const [user, setUser ] = useState(null)
     const [dollars, setDollars] = useState()
     const [timer, setTimer] = useState(30)
     const [playSound] = useSound(startPlay)
     const [correctAnswer] = useSound(correct)
     const [wrongAnswer] = useSound(wrong)
-            useEffect(() => {
-        playSound()
-    },[playSound])
+    //         useEffect(() => {
+    //     playSound()
+    // },[playSound])
+    if (user) {
+             playSound() 
+    }
     const delay = (duration, callback) => {
         setTimeout(() => {
             callback();
@@ -70,7 +74,8 @@ export const ContextProvider = ({ children }) => {
             className, setClassName,
             optionClick,
             dollars, setDollars,
-            timer, setTimer
+            timer, setTimer,
+            user, setUser
     }}>
         {children }
     </ContextContext.Provider>
