@@ -17,12 +17,8 @@ export const ContextProvider = ({ children }) => {
     const [playSound] = useSound(startPlay)
     const [correctAnswer] = useSound(correct)
     const [wrongAnswer] = useSound(wrong)
-    //         useEffect(() => {
-    //     playSound()
-    // },[playSound])
-    if (user) {
-             playSound() 
-    }
+
+
     const delay = (duration, callback) => {
         setTimeout(() => {
             callback();
@@ -63,8 +59,8 @@ export const ContextProvider = ({ children }) => {
     }, [timer, setTime])
 
          useEffect(() => {
-            setTimer(30)
-        },[questionNum])
+         user &&  setTimer(30)
+        },[questionNum, user])
     return <ContextContext.Provider
         value={{
             questionNum, setQuestionNum,
@@ -75,7 +71,8 @@ export const ContextProvider = ({ children }) => {
             optionClick,
             dollars, setDollars,
             timer, setTimer,
-            user, setUser
+            user, setUser,
+            playSound
     }}>
         {children }
     </ContextContext.Provider>

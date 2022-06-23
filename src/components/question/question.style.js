@@ -11,4 +11,5 @@ export const QuestionContainer = styled.div`
 export const Text = styled.h2`
     text-align: center;
     font-family: monospace;
+    text-transform: capitalize;
 `

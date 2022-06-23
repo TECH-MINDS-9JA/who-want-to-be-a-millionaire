@@ -5,17 +5,23 @@ import { Home, Cash, Stop, Start,  } from './file'
 import { ContextContext } from './context/Context'
 
 function App() {
-    const { time } = useContext(ContextContext)
+    const { time, user } = useContext(ContextContext)
 
     return (
         <AppContainer>
             <GlobalStyle />
             {
-                time ? <Stop />
+                !user ? <Start />
                     :
                 <>
-                    <Home />
-                    <Cash />
+                    {
+                        time ? <Stop />
+                            :
+                            <>
+                                <Home />
+                                <Cash />
+                            </>
+                    }
                 </>
             }
          </AppContainer>
