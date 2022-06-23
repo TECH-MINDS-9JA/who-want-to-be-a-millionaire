@@ -20,16 +20,31 @@ export const StopWrapper = styled.div`
 `
 export const Header = styled.h1`
     font-weight: 700;
-    font-size: 5rem;
+    font-size: 4rem;
     text-transform: uppercase;
     color: crimson;
 font-family: cursive;
+
+@media(max-width: 780px){
+    font-size: 2.5rem;
+}
+
+@media(max-width: 450px){
+    font-size: 1.8rem;
+}
 `
 export const Money = styled.h2`
     text-transform: capitalize;
     font-size: 3rem;
     font-family: monospace;
        color: whitesmoke;
+
+       @media(max-width: 780px){
+    font-size: 2rem;
+}
+@media(max-width: 450px){
+    font-size: 1rem;
+}
 `
 export const Back = styled.button`
     cursor: pointer;
