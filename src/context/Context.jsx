@@ -12,7 +12,7 @@ export const ContextProvider = ({ children }) => {
     const [selected, setSelected] = useState(null)
     const [className, setClassName] = useState(null)
     const [user, setUser ] = useState(null)
-    const [dollars, setDollars] = useState()
+    const [dollars, setDollars] = useState(0)
     const [timer, setTimer] = useState(30)
     const [playSound] = useSound(startPlay)
     const [correctAnswer] = useSound(correct)
