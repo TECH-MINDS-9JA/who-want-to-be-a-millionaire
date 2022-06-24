@@ -23,7 +23,26 @@ export const Play = styled.div`
     padding: 15px 25px;
     cursor: pointer;
     color: gray;
+    color: white;
     opacity: 0.1;
+        @media(max-width: 1206px){
+        right: 40%;
+        bottom: 15%;
+}
+    @media(max-width: 990px){
+        right: 30%;
+        bottom: 10%;
+}
+    @media(max-width: 500px){
+        right: 25%;
+        bottom:12%;
+            font-size: 30px;
+}
+    @media(max-width: 340px){
+        right: 25%;
+        bottom:15%;
+            font-size: 15px;
+}
 `
 export const Form = styled.form`
     width: 400px;
@@ -39,6 +58,9 @@ export const Label = styled.label`
     font-family: monospace;
     font-weight: 700;
     color: lightgray;
+        @media(max-width: 340px){
+            font-size: 20px;
+}
 `
 export const Input = styled.input`
 width: 200px;
