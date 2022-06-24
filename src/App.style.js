@@ -14,6 +14,7 @@ height: 100vh;
 color: white;
 display: flex;
 background: lightseagreen;
+overflow: hidden;
 `
 
 export default GlobalStyle

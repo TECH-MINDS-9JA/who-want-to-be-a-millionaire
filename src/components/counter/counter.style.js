@@ -13,5 +13,17 @@ export const CounterContainer = styled.div`
     justify-content: center;
     font-weight: 700;
     font-family: arial;
+
+    @media(max-width:985px){
+        width: 70px;
+        height: 70px;
+        top: 35%;
+    }
+    @media(max-width:490px){
+        top: 10%;
+        
+    }
 `
-export const Num = styled.h1``
+export const Num = styled.h1`
+    transition: all 5s linear;
+`

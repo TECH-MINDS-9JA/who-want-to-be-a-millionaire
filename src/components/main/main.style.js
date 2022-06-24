@@ -4,6 +4,7 @@ export const MainContainer = styled.div`
 width: 100%;
 height: auto;
     align-self: flex-end;
+    
 `
 export const MainWrapper = styled.div`
     width: 90%;
@@ -14,12 +15,17 @@ export const MainWrapper = styled.div`
     flex-direction: column;
     gap: 7rem;
     margin-bottom: 2rem;
+    align-items: center;
+    @media(max-width:342px){
+        width: 100%;
+    }
 `
 export const OptionContainer = styled.div`
 width: 100%;
     display: flex;
     gap: 2rem;
 flex-wrap: wrap;
+align-items: center;
 `
 
 export const Option = styled.div`
@@ -32,6 +38,8 @@ export const Option = styled.div`
     cursor: pointer;
     box-shadow: 0px 2px 2px 0px darkgray;
 background: linear-gradient(#0e0124, #22074d);
+
+    
 `
 export const Text = styled.p`
 text-align: center;

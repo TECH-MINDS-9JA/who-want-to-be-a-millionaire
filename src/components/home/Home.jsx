@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { HomeContainer } from './home.style'
-import { Counter, Main, Stop } from '../../file'
+import { Counter, Main, Small } from '../../file'
 import { ContextContext } from '../../context/Context'
 function Home() {
   const { time } = useContext(ContextContext)
@@ -8,6 +8,7 @@ function Home() {
     <HomeContainer >
       <Counter />
       <Main />
+      <Small />
     </HomeContainer>
   )
 }

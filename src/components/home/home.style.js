@@ -9,4 +9,7 @@ export const HomeContainer = styled.div`
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    @media(max-width:498px){
+        min-width: 100%;
+    }
 `

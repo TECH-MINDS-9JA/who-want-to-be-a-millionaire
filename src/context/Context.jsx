@@ -60,7 +60,12 @@ export const ContextProvider = ({ children }) => {
 
          useEffect(() => {
          user &&  setTimer(30)
-        },[questionNum, user])
+         }, [questionNum, user])
+
+               const handleRefresh = () => {
+        window.location.reload(true)
+        }
+
     return <ContextContext.Provider
         value={{
             questionNum, setQuestionNum,
@@ -72,7 +77,7 @@ export const ContextProvider = ({ children }) => {
             dollars, setDollars,
             timer, setTimer,
             user, setUser,
-            playSound
+            playSound, handleRefresh
     }}>
         {children }
     </ContextContext.Provider>
