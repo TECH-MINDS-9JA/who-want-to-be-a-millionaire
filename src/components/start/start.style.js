@@ -1,5 +1,7 @@
+import React from  'react'
 import styled from 'styled-components'
-
+import { Fade } from 'react-reveal'
+import withReveal from 'react-reveal/withReveal'
 export const StartContainer = styled.div`
     width: 100%;
     height: 100vh;
@@ -11,7 +13,6 @@ export const StartContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
 `
 export const Play = styled.div`
     position: absolute;

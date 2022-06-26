@@ -3,6 +3,7 @@ import GlobalStyle from './App.style'
 import { AppContainer } from './App.style'
 import { Home, Cash, Stop, Start,  } from './file'
 import { ContextContext } from './context/Context'
+import { Fade } from 'react-reveal'
 
 function App() {
     const { time, user } = useContext(ContextContext)
@@ -11,15 +12,16 @@ function App() {
         <AppContainer>
             <GlobalStyle />
             {
-                !user ? <Start />
+                !user ?
+                    <Start />
                     :
                 <>
                     {
                         time ? <Stop />
                             :
                             <>
-                                <Home />
-                                <Cash />
+                             <Home />
+                             <Cash />
                             </>
                     }
                 </>
