@@ -11,9 +11,6 @@ function Start() {
     playSound()
   }
   return (
-    // <Fade top>
-    <>
-      <Fade>
     <StartContainer>
         <Play type='submit' onClick={handleSubmit}>let play now</Play>
       <Form>
@@ -26,8 +23,6 @@ function Start() {
         />
         </Form>
         </StartContainer>
-        </Fade>
-    </>
   )
 }
 

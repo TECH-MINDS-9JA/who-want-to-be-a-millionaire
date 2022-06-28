@@ -4,7 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot "
+    "dev": "webpack-dev-server --mode development --open --hot ",
+    "postinstall": " webpack",
+    "serve": "npm run postinstall && serve -s dist",
+    "server": "node server.js"
   },
   "devDependencies": {
     "@babel/core": "^7.18.5",
@@ -23,9 +26,11 @@
     "webpack-dev-server": "^4.9.2"
   },
   "dependencies": {
+    "express": "^4.18.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-reveal": "^1.2.2",
+    "server": "^1.0.37",
     "styled-components": "^5.3.5",
     "use-sound": "^4.0.1"
   }

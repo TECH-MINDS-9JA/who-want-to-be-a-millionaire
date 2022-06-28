@@ -1,4 +1,4 @@
-import React, { useContext }  from 'react'
+import React,{ useContext }  from 'react'
 import { MainContainer, MainWrapper, OptionContainer, Option, Text} from './main.style'
 import { Question } from '../../file'
 import { ContextContext } from '../../context/Context'
