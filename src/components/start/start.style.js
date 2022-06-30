@@ -5,7 +5,7 @@ import withReveal from 'react-reveal/withReveal'
 export const StartContainer = styled.div`
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to top, rgba(0,0,0,0.02), #020230),url("/img/play.jpg") center;
+    background: linear-gradient(to top, rgba(0,0,0,0.02), #020230),url(${props => props.start}) center;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

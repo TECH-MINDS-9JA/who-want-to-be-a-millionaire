@@ -2,6 +2,7 @@ import React,{ useContext, useRef } from 'react'
 import { StartContainer, Play, Form, Label, Input } from './start.style'
 import { Fade, Slide } from 'react-reveal'
 import { ContextContext } from '../../context/Context'
+import { startImg } from '../../file'
 function Start() {
   const {  setUser, playSound } = useContext(ContextContext)
   const inputRef = useRef(null)
@@ -11,7 +12,7 @@ function Start() {
     playSound()
   }
   return (
-    <StartContainer>
+    <StartContainer start={startImg}>
         <Play type='submit' onClick={handleSubmit}>let play now</Play>
       <Form>
         <Label>Please Enter Your Name</Label>

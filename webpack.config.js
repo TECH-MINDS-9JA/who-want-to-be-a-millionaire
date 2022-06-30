@@ -1,7 +1,7 @@
 const path = require('path')
 const HtmlwebpackPlugin = require('html-webpack-plugin')
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: path.join(__dirname, "src", "index.js"),
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -23,6 +23,10 @@ module.exports = {
             {
                 test: /\.(jpg|png|mp3)$/,
                 use: ["file-loader"]
+            },
+            {
+                test: /\.(html)$/,
+                use:['html-loader']
             },
             {
                 test: /\.(js|jsx)$/,

@@ -13,6 +13,9 @@ import startPlay from './sound/play.mp3'
 import correct from './sound/correct.mp3'
 import wait from './sound/wait.mp3'
 import wrong from './sound/wrong.mp3'
+import startImg from './img/play.jpg'
+import wrongImg from './img/wrong.jpg'
+import bgImg from './img/bg.jpg'
 
 
 
@@ -20,5 +23,6 @@ import wrong from './sound/wrong.mp3'
 
 export {
     Home, Cash, Money, MoneyData, Counter, Main,
-    Question, question, Stop, Start, startPlay, correct, wait, wrong, Small
+    Question, question, Stop, Start, startPlay, correct, wait, wrong, Small, startImg,
+    wrongImg, bgImg
 }
