@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --open --hot ",
-    "postinstall": " webpack",
+    "dev": "webpack-dev-server  --open --hot ",
+    "build": " NODE.ENV=production webpack",
     "server": "node server.js"
   },
   "devDependencies": {
@@ -16,6 +16,7 @@
     "@babel/runtime": "^7.18.3",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
     "html-loader": "^3.1.2",

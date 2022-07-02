@@ -1,11 +1,17 @@
 const path = require('path')
 const HtmlwebpackPlugin = require('html-webpack-plugin')
+const { cleanWepackPlugin, CleanWebpackPlugin } = require('clean-webpack-plugin')
+let mode = 'development'
+if (process.env.NODE_ENV === 'production') {
+    mode = 'production'
+}
 module.exports = {
-    mode: 'production',
+    mode: mode,
     entry: path.join(__dirname, "src", "index.js"),
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'main.js'
+        filename: 'main.js',
+        assetModuleFilename:"public/[hash][ext][query]"
     },
     target: 'web',
     devServer: {
@@ -22,7 +28,7 @@ module.exports = {
         rules: [
             {
                 test: /\.(jpg|png|mp3)$/,
-                use: ["file-loader"]
+                type: "asset"
             },
             {
                 test: /\.(html)$/,
@@ -51,6 +57,7 @@ module.exports = {
         ]
     }, 
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlwebpackPlugin({
             title: "who-want-to-be-a-millionaira",
             template: path.join(__dirname, "src", "index.html")
