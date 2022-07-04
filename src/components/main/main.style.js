@@ -42,6 +42,7 @@ background: linear-gradient(#0e0124, #22074d);
     
 `
 export const Text = styled.p`
+    min-width: 100%;
 text-align: center;
 font-weight: lighter;
 font-size: 18px;

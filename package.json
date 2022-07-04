@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server  --mode=development --open --hot ",
     "build": " webpack",
-    "server": "node server.js"
+    "server": " webpack && node server.js"
   },
   "devDependencies": {
     "@babel/core": "^7.18.5",
