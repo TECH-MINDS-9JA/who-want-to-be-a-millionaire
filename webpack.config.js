@@ -1,12 +1,9 @@
 const path = require('path')
 const HtmlwebpackPlugin = require('html-webpack-plugin')
 const { cleanWepackPlugin, CleanWebpackPlugin } = require('clean-webpack-plugin')
-let mode = 'development'
-if (process.env.NODE_ENV === 'production') {
-    mode = 'production'
-}
+
 module.exports = {
-    mode: mode,
+    mode: 'production',
     entry: path.join(__dirname, "src", "index.js"),
     output: {
         path: path.resolve(__dirname, 'dist'),
